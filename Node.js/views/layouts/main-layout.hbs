@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  {{#if hasCSS}}
+    <link rel="stylesheet" href="/css/main.css">
+  {{/if}}
+</head>
+<body>
+  <header>
+    <ul>
+      <li class="{{#if activeMainPage}}active{{/if}}">Главная страница: <a href="/">/</a></li>
+      <li class="{{#if activeUsers}}active{{/if}}">Получение всех пользователей: <a href="/users">/users</a></li>
+      <li class="{{#if activeId}}active{{/if}}">Получение пользователя по его id: <a href="/users/id">/users/id</a></li>
+      <li class="{{#if activeUpdate}}active{{/if}}">Изменение данных пользователя по его id: <a href="/users/update">/users/update</a></li>
+      <li class="{{#if activeAdd}}active{{/if}}">Добавление нового пользователя: <a href="/users/add">/users/add</a></li>
+      <li class="{{#if activeDelete}}active{{/if}}">Удаление пользователя: <a href="/users/delete">/users/delete</a></li>
+    </ul>
+  </header>
+  {{{body}}}
+</body>
+</html>
