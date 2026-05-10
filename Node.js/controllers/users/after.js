@@ -154,7 +154,7 @@ module.exports.getAllUsers = (req, res, next) => {
   const data = fs.readFile(config.pathUsersFile, (err, data) => {
     if(!err) {
       const currentData = JSON.parse(data.toString());
-      res.render('after/getAllUsers', {title: "Get All Users", users: currentData, hasCSS: true, lengthUsersArrayPositive: currentData.length > 0 })
+      res.render('after/getAllUsers', {title: "Get All Users", users: currentData, hasCSS: true, lengthUsersArrayPositive: currentData.length > 0, activeUsers: true })
     };
   });
 };
